@@ -1,7 +1,11 @@
-public class Cat implements Member {
-    private boolean success;
-    private final double maxRunDistance = 150;
-    private final double maxJumpHeight = 2;
+public class Cat extends Member {
+    public Cat(double maxRunDistance, double maxJumpHeight) {
+        super(maxRunDistance, maxJumpHeight);
+    }
+
+    public String getName() {
+        return "Cat";
+    }
 
     public void run() {
         System.out.println(getName() + " is running");
@@ -9,26 +13,6 @@ public class Cat implements Member {
 
     public void jump() {
         System.out.println(getName() + " is jumping");
-    }
-
-    public String getName() {
-        return "Cat";
-    }
-
-    public boolean isSuccess() {
-        return success;
-    }
-
-    public void setSuccess(boolean success) {
-        this.success = success;
-    }
-
-    public double getMaxRunDistance() {
-        return maxRunDistance;
-    }
-
-    public double getMaxJumpHeight() {
-        return maxJumpHeight;
     }
 }
 

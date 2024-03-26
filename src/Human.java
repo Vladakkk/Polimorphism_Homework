@@ -1,7 +1,11 @@
-public class Human implements Member {
-    private boolean success;
-    private final double maxRunDistance = 100;
-    private final double maxJumpHeight = 1.5;
+public class Human extends Member {
+    public Human(double maxRunDistance, double maxJumpHeight) {
+        super(maxRunDistance, maxJumpHeight);
+    }
+
+    public String getName() {
+        return "Human";
+    }
 
     public void run() {
         System.out.println(getName() + " is running");
@@ -9,26 +13,6 @@ public class Human implements Member {
 
     public void jump() {
         System.out.println(getName() + " is jumping");
-    }
-
-    public String getName() {
-        return "Human";
-    }
-
-    public boolean isSuccess() {
-        return success;
-    }
-
-    public void setSuccess(boolean success) {
-        this.success = success;
-    }
-
-    public double getMaxRunDistance() {
-        return maxRunDistance;
-    }
-
-    public double getMaxJumpHeight() {
-        return maxJumpHeight;
     }
 }
 

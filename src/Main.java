@@ -15,17 +15,17 @@ public class Main {
         Member member;
         switch (choice) {
             case 1:
-                member = new Human();
+                member = new Human(100, 1.5);
                 break;
             case 2:
-                member = new Cat();
+                member = new Cat(150, 2);
                 break;
             case 3:
-                member = new Robot();
+                member = new Robot(200, 7);
                 break;
             default:
                 System.out.println("Invalid choice. Default participant selected (Human).");
-                member = new Human();
+                member = new Human(100, 1.5);
                 break;
         }
 
@@ -48,9 +48,9 @@ public class Main {
             }
         }
         if (member.isSuccess()) {
-            System.out.println("Participant " + member.getName() + " has overcome all obstacles");
+            System.out.println("Member " + member.getName() + " has overcome all obstacles");
         } else {
-            System.out.println("Participant " + member.getName() + " failed to overcome the obstacle");
+            System.out.println("Member " + member.getName() + " failed to overcome the obstacle");
         }
         scanner.close();
     }
